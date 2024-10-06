@@ -22,10 +22,12 @@ ERROR_MESSAGE_READING_PDF = "Error reading the PDF file"
 ERROR_MESSAGE_TOO_LONG = "The total content is too long. Please ensure the combined text from PDFs and URL is fewer than {CHARACTER_LIMIT} characters."
 
 # Fireworks API-related constants
-FIREWORKS_API_KEY = os.getenv("FIREWORKS_API_KEY")
-FIREWORKS_BASE_URL = "https://api.fireworks.ai/inference/v1"
+FIREWORKS_API_KEY = os.getenv("API_KEY")
+# "https://api.fireworks.ai/inference/v1"
+FIREWORKS_BASE_URL = os.getenv("API_URL")
 FIREWORKS_MAX_TOKENS = 16_384
-FIREWORKS_MODEL_ID = "accounts/fireworks/models/llama-v3p1-405b-instruct"
+# accounts/fireworks/models/llama-v3p1-405b-instruct
+FIREWORKS_MODEL_ID = os.getenv("API_MODEL_ID")
 FIREWORKS_TEMPERATURE = 0.1
 FIREWORKS_JSON_RETRY_ATTEMPTS = 3
 
